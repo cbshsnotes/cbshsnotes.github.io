@@ -1,0 +1,212 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+cloudflare-app[app="flashcard"] {
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  color: #444;
+  display: flex;
+  flex-flow: column;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  max-width: 100%;
+  min-height: 70px;
+  padding: 20px 15px;
+  position: fixed;
+  text-rendering: optimizeLegibility;
+  transition: bottom .4s ease-in-out;
+  visibility: hidden;
+}
+
+cloudflare-app[app="flashcard"][data-visibility="visible"] {
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  cloudflare-app[app="flashcard"] {
+    bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.12);
+    width: 330px;
+  }
+  cloudflare-app[app="flashcard"][data-position="left"] {
+    left: 20px;
+  }
+  cloudflare-app[app="flashcard"][data-position="right"] {
+    right: 20px;
+  }
+  cloudflare-app[app="flashcard"] flashcard-content {
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 768px) {
+  cloudflare-app[app="flashcard"] {
+    border-top: 1px solid #ccc;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  cloudflare-app[app="flashcard"] flashcard-content {
+    line-height: 1.785;
+  }
+}
+
+cloudflare-app[app="flashcard"] flashcard-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 auto;
+}
+
+cloudflare-app[app="flashcard"] flashcard-title {
+  font-size: 16px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1 1 auto;
+}
+
+cloudflare-app[app="flashcard"] flashcard-close {
+  margin-left: 1em;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  flex: 0 0 auto;
+}
+
+cloudflare-app[app="flashcard"] flashcard-content {
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+}
+
+cloudflare-app[app="flashcard"] flashcard-footer {
+  margin-top: 0.5em;
+  display: flex;
+  flex-flow: column;
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+cloudflare-app[app="flashcard"] flashcard-footer .flashcard-action {
+  background-color: #fff !important;
+  border-radius: 3px !important;
+  border: 1px solid !important;
+  box-shadow: inherit !important;
+  cursor: pointer !important;
+  display: inline-block;
+  font-size: 1em !important;
+  margin-top: 10px !important;
+  padding: 5px 0 !important;
+  text-decoration: none !important;
+  text-shadow: inherit !important;
+}
+
+cloudflare-app[app="flashcard"] .flashcard-action[href=""] {
+  pointer-events: none !important;
+}
+
+cloudflare-app[app="flashcard"] flashcard-message {
+  display: block;
+  line-height: 1.4;
+  margin-top: 10px;
+  overflow: hidden;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+}
+
+cloudflare-app[app="flashcard"] flashcard-message p:first-child {
+  margin-top: 0;
+}
+
+cloudflare-app[app="flashcard"] flashcard-message p:last-child {
+  margin-bottom: 0;
+}cloudflare-app[app="like-button"] {
+  display: inline-block;
+}
+
+cloudflare-app[app="like-button"][cf-env="preview"] > span,
+cloudflare-app[app="like-button"][cf-env="preview"] > span > iframe {
+  height: auto !important;
+  width: auto !important;
+  overflow: visible !important;
+}
+/* This is a compiled file, you should be editing the file in the templates directory */
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #000000;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 2px;
+}
+
+.pace .pace-progress-inner {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #000000, 0 0 5px #000000;
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -moz-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  -o-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+.pace .pace-activity {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 15px;
+  right: 15px;
+  width: 14px;
+  height: 14px;
+  border: solid 2px transparent;
+  border-top-color: #000000;
+  border-left-color: #000000;
+  border-radius: 10px;
+  -webkit-animation: pace-spinner 400ms linear infinite;
+  -moz-animation: pace-spinner 400ms linear infinite;
+  -ms-animation: pace-spinner 400ms linear infinite;
+  -o-animation: pace-spinner 400ms linear infinite;
+  animation: pace-spinner 400ms linear infinite;
+}
+
+@-webkit-keyframes pace-spinner {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-moz-keyframes pace-spinner {
+  0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-o-keyframes pace-spinner {
+  0% { -o-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-ms-keyframes pace-spinner {
+  0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes pace-spinner {
+  0% { transform: rotate(0deg); transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
