@@ -12,5 +12,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_IO_GAMES235 }}'
-          projectId: io-games235
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HTML5_GAMES235 }}'
+          projectId: html5-games235
